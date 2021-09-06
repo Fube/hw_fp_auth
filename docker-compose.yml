@@ -1,0 +1,9 @@
+services:
+    keycloak:
+        image: jboss/keycloak:latest
+        env_file:
+            - ./config/keycloak.env
+        ports:
+            - "8080:8080"
+        volumes:
+            - ./data/keycloak/realms.json:/tmp/realms.json
